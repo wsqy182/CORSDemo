@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="test()">点击进行跨域测试!</button>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function test() {
+        console.log("fuck!");
+        // 为给定 ID 的 user 创建请求
+        axios.get('http://192.168.100.122:8080/user?ID=12345')
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+</script>
+</html>
